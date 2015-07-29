@@ -35,11 +35,23 @@
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
 			<!-- wp-menu here -->
-				<?php wp_nav_menu( array( 'theme_location' => 'fixed-top-menu' ) );?>
+				<?php 
+					wp_nav_menu( 
+						array( 
+							'menu'				=>	'primary',
+							'theme_location' 	=>  'fixed-top-menu',
+							'depth'				=>	2,							
+							'container'			=>	'div',
+							'container_class'	=>	'collapse navbar-collapse',
+							'container_id'		=>	'bs-navbar-collapse',
+							'menu_class'		=>	'nav navbar-nav',
+							'fallback_cb'		=>	'wp-bootstrap_navwalker::fallback',
+							'walker'			=>	new wp_bootstrap_navwalker()
+							// No Chuck Norris!!!!!
+						) 
+					);
+				?>
 			<!-- /wp-menu here -->
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-          	<li><?php get_search_form();?></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
