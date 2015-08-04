@@ -59,20 +59,73 @@
 ////////////////////////////////////////
 //		CUSTOM SIDEBARS
 	
-/*	function custom_sidebars(){
+	function custom_sidebars(){
 	
 		$args = array(
 			'id' 			=> 	'main-sidebar',
 			'class'			=>	'main-sidebar',
 			'name'			=>	__( 'main-sidebar', 'myTheme' ),
 			'description'	=>	__( ' Main Sidebar for 2-col Layouts', 'myTheme' ),
-			'before-title'	=>	'<h3 class="sidebar-heading">',
-			'after-title'	=>	'</h3>',
+			'before_title'	=>	'<h3 class="sidebar-heading">',
+			'after_title'	=>	'</h3>',
 		);
 		register_sidebar( $args );
+		
+		
+		$args = array(
+			'id' 			=> 	'footer-column-1',
+			'class'			=>	'footer-column',
+			'name'			=>	__( 'footer-column-1', 'myTheme' ),
+			'description'	=>	__( 'footer-column-1', 'myTheme' ),
+			'before_title'	=>	'<header class="footer-column-header">',
+			'after_title'	=>	'</header>',
+			'before_widget'	=>	'<aside id="%1$s" class="block %2$s"',
+			'after_widget'	=>	'</aside>'
+		);
+		register_sidebar( $args );
+		
+		
+		
+		$args = array(
+			'id' 			=> 	'footer-column-2',
+			'class'			=>	'footer-column',
+			'name'			=>	__( 'footer-column-2', 'myTheme' ),
+			'description'	=>	__( 'footer-column-2', 'myTheme' ),
+			'before_title'	=>	'<header class="footer-column-header">',
+			'after_title'	=>	'</header>',
+			'before_widget'	=>	'<aside id="%1$s" class="block %2$s"',
+			'after_widget'	=>	'</aside>'
+		);
+		register_sidebar( $args );
+		
+			$args = array(
+			'id' 			=> 	'footer-column-3',
+			'class'			=>	'footer-column',
+			'name'			=>	__( 'footer-column-3', 'myTheme' ),
+			'description'	=>	__( 'footer-column-3', 'myTheme' ),
+			'before_title'	=>	'<header class="footer-column-header">',
+			'after_title'	=>	'</header>',
+			'before_widget'	=>	'<aside id="%1$s" class="block %2$s"',
+			'after_widget'	=>	'</aside>'
+		);
+		register_sidebar( $args );
+	
+			$args = array(
+			'id' 			=> 	'footer-column-4',
+			'class'			=>	'footer-column',
+			'name'			=>	__( 'footer-column-4', 'myTheme' ),
+			'description'	=>	__( 'footer-column-4', 'myTheme' ),
+			'before_title'	=>	'<header class="footer-column-header">',
+			'after_title'	=>	'</header>',
+			'before_widget'	=>	'<aside id="%1$s" class="block %2$s"',
+			'after_widget'	=>	'</aside>'
+		);
+		register_sidebar( $args );
+	
+		
 	}
 	add_action( 'widgets_init', 'custom_sidebars');
-*/	
+
 //		/CUSTOM SIDEBARS
 ////////////////////////////////////////
 ////////////////////////////////////////
