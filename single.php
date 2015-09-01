@@ -1,24 +1,14 @@
-<!-- myTheme -->
-
-
+<!-- myTheme - single.php -->
 
 <?php get_header();?>
 
 
 
-
-
 <!-- Insert content -->
-
-
 
     <div id="main-content" class="container">
 
-    
-
-    
-
-<?php if (is_active_sidebar('main-sidebar')): ?>
+<?php if (is_active_sidebar('single-sidebar')): ?>
 
       <div class="row"><!-- .row -->
 
@@ -26,7 +16,7 @@
 
 <?php endif ?>
 
-<!-- START the Loop -->
+			<!-- START the Loop -->
 
             <div class="row">
 
@@ -46,7 +36,7 @@
 
                         <small><?php the_time('F jS, Y') ?> | <?php the_author() ?></small>
 
-                        <?php the_excerpt(); ?>
+                        <?php the_content(); ?>
 
                     </div><!-- /.col-md-8 -->
 
@@ -74,17 +64,17 @@
 
             </div><!-- /.row -->
 
-<!-- END the Loop -->
+			<!-- END the Loop -->
 
             
 
-<?php if (is_active_sidebar('main-sidebar')): ?>
+<?php if (is_active_sidebar('single-sidebar')): ?>
 
         </div><!-- /.col-md-8 -->
 
         <div class="col-md-4">
 
-           		<?php get_sidebar();?><!-- <- include sidebar.php -->
+           		<?php get_sidebar('single');?><!-- <- include sidebar-single.php -->
 
         </div><!-- /.col-md-4 -->
 
@@ -110,24 +100,5 @@
 
 
 
-<!-- /myTheme -->
+<!-- /myTheme - single.php -->
 
- /.row --> 
-        </div><!-- /.col-md-8 --><!-- <- -->
-        <div class="col-md-4"><!-- <- -->  
-        	<?php if (is_active_sidebar('main-sidebar')): ?>
-           		<!-- Insert sidebar here -->
-           		<?php get_sidebar('main-sidebar');?>
-           	<?php endif ?>
-        </div><!-- <- -->
-      </div><!-- /.row --><!-- <- -->
-    </div><!-- /.container -->
-
-      <hr>
-
-
-<!-- /Insert content -->
-
-<?php get_footer();?>
-
-<!-- /myTheme -->

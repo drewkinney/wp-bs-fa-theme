@@ -1,4 +1,4 @@
-<!-- myTheme -->
+<!-- myTheme - page.php -->
 
 
 
@@ -9,6 +9,10 @@
 
 
 <!-- Insert content -->
+
+
+
+   <!-- Main jumbotron for a primary marketing message or call to action -->
 
 
 
@@ -26,13 +30,27 @@
 
 <?php endif ?>
 
-<!-- START the Loop -->
+			<!-- START the Loop -->
 
             <div class="row">
 
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><!-- the Loop -->
 
                     <div class="col-md-8">
+
+
+
+
+
+			<?php if ( is_Page('menu')){ 
+
+
+
+			}else{ 
+
+?>			
+
+
 
                         <h2 id="post-<?php the_ID();?>">
 
@@ -46,7 +64,15 @@
 
                         <small><?php the_time('F jS, Y') ?> | <?php the_author() ?></small>
 
-                        <?php the_excerpt(); ?>
+
+
+			<?php } ?>
+
+
+
+
+
+                        <?php the_content(); ?>
 
                     </div><!-- /.col-md-8 -->
 
@@ -74,7 +100,7 @@
 
             </div><!-- /.row -->
 
-<!-- END the Loop -->
+			<!-- END the Loop -->
 
             
 
@@ -84,7 +110,7 @@
 
         <div class="col-md-4">
 
-           		<?php get_sidebar();?><!-- <- include sidebar.php -->
+           		<?php get_sidebar();?><!-- <- include sidebar-home.php -->
 
         </div><!-- /.col-md-4 -->
 
@@ -110,24 +136,4 @@
 
 
 
-<!-- /myTheme -->
-
- /.row --> 
-        </div><!-- /.col-md-8 --><!-- <- -->
-        <div class="col-md-4"><!-- <- -->  
-        	<?php if (is_active_sidebar('main-sidebar')): ?>
-           		<!-- Insert sidebar here -->
-           		<?php get_sidebar('main-sidebar');?>
-           	<?php endif ?>
-        </div><!-- <- -->
-      </div><!-- /.row --><!-- <- -->
-    </div><!-- /.container -->
-
-      <hr>
-
-
-<!-- /Insert content -->
-
-<?php get_footer();?>
-
-<!-- /myTheme -->
+<!-- /myTheme - page.php -->

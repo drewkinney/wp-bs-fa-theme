@@ -1,16 +1,44 @@
 /*
+
 Theme Name: myTheme
+
 Theme URI: https://github.com/drewkinney/
+
 Author: Drew Kinney
+
 Author URI: http://drewkinney.com/
+
 Description: Bootstrap 3 theme for Wordpress
+
 Version: 0.1
+
 License: GNU general Public License v2 or later
+
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
 Tags: responsive-layout
+
 Text Domain: myTheme
+
 */
 
+
+
 body {
-	color: red;	
+
+	color: #999;	
+
+}
+
+.aside-main .nav-pills > li > a {
+
+  display: inline-block !important;
+
+  padding-right: 5px;
+
+  font-size: 0px;
+
+}
+footer aside header {
+	font-size: 2em;	
 }

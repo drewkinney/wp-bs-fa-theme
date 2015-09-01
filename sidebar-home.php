@@ -1,5 +1,3 @@
-<h3>Follow Us</h3>
-
 <?php
 
 
@@ -7,7 +5,7 @@
 // insert sidebar-menu
 
 
-
+/*
 wp_nav_menu( 
 
 	array (
@@ -36,16 +34,20 @@ wp_nav_menu(
 
 );
 
-
+*/
 
 // custom sidebar widget
 
 
 
-if ( is_active_sidebar('main-sidebar') ) {
+if ( is_front_page() ) {	
 
-		dynamic_sidebar('main-sidebar');
+		if ( is_active_sidebar('front-page-sidebar') ) { 
 
-	}
+			dynamic_sidebar('front-page-sidebar'); 
+
+		}
+
+}
 
 ?>
