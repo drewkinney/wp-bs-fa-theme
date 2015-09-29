@@ -17,7 +17,6 @@
 
 
 
-
 ////////////////////////////////////////
 
 ////////////////////////////////////////
@@ -25,22 +24,23 @@
 //		ENQUEUE JS & CSS
 
 
-
 	function myTheme_scripts_styles(){
 
 		// Register Styles
 
-		wp_register_style('myTheme-bs-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css', false , '3.3.5');
+		wp_register_style('myTheme-bs-css', 'assets/bootstrap/css/bootstrap-theme.min.css', false , '3.3.5');
 
-		wp_register_style('myTheme-fa-css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array( 'myTheme-bs-css' ) , '4.3.0');
+		wp_register_style('myTheme-fa-css', 'assets/font-awesome-4.4.0/css/font-awesome.min.css', array( 'myTheme-bs-css' ) , '4.3.0');
 
 		wp_register_style('myTheme-css', get_template_directory_uri().'/style.css', '' , '1.0');
 
 		// Register Scripts
 
-		wp_register_script('myTheme-bs-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js', array('jquery'), '3.3.5', true );
+		wp_register_script('myTheme-bs-js', 'assets/bootstrap/js/bootstrap.min.js', array('jquery'), '3.3.5', true );
+	
+		wp_register_script('myTheme-jqv-js', 'assets/jquery-validation-1.14.0/jquery.validate.min.js', array('jquery'), '3.3.5', true );
 
-		wp_register_script('myTheme-js', get_template_directory_uri().'/assets/js/script.js', array('jquery', 'myTheme-bs-js'), '1.0', true );
+		wp_register_script('myTheme-js', 'assets/js/script.js', array('jquery', 'myTheme-bs-js'), '1.0', true );
 
 		// Enqueue Styles
 
@@ -53,6 +53,8 @@
 		// Enqueue Scripts
 
 		wp_enqueue_script('myTheme-bs-js');
+	
+		wp_enqueue_script('myTheme-jqv-js');
 
 		wp_enqueue_script('myTheme-js');
 
@@ -94,11 +96,11 @@
 
 		array(
 
-			'fixed-top-menu'	=> __( 'Fixed Top Menu', 'myTheme' ),
+			'primary-menu'	=> __( 'Primary Menu', 'myTheme' ),
 
-			'footer-menu' 		=> __( 'Footer Menu', 'myTheme' ),
+			'secondary-menu' 		=> __( 'Secondary Menu', 'myTheme' ),
 
-			'sidebar-menu' 		=> __( 'Sidebar Top Menu', 'myTheme' )
+			'tertiary-menu' 		=> __( 'Tertiary Menu', 'myTheme' )
 
 		)
 
@@ -309,51 +311,19 @@
 
 
 ////////////////////////////////////////
-
 ////////////////////////////////////////
-
 //		THEME SUPPORT
 
-
-
-
-
 // Register Theme Features
-
-	function custom_theme_features()  {
-
-	
-
-		// Add theme support for Automatic Feed Links
-
-		add_theme_support( 'automatic-feed-links' );
-
-	
-
-		// Add theme support for Featured Images
-
-		// add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
-
-	
-
-		// Add theme support for HTML5 Semantic Markup
-
-		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
-
-	
-
-		// Add theme support for document Title tag
-
-		add_theme_support( 'title-tag' );
-
-	}
-
-	add_action( 'after_setup_theme', 'custom_theme_features' );
+//		function custom_theme_features()  {
+//			add_theme_support( 'automatic-feed-links' );
+//			add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+//			add_theme_support( 'title-tag' );
+//		}
+//	add_action( 'after_setup_theme', 'custom_theme_features' );
 
 //		/THEME SUPPORT
-
 ////////////////////////////////////////
-
 ////////////////////////////////////////
 
 
